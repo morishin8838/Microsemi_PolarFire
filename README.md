@@ -1,1 +1,1 @@
-# PolarFire
+# PolarFire For Microsemi FPGA
