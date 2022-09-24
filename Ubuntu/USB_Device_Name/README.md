@@ -52,7 +52,7 @@ Bus 002 Device 003: ID 2109:0813 VIA Labs, Inc. USB3.0 Hub - /dev/bus/usb/002/00
 
 ```
 $cd /dev/bus/usb/001
-$ sudo chmod 775 010
-$ sudo chmod 775 011
+$ sudo chmod 777 010
+$ sudo chmod 777 011
 ```
 
