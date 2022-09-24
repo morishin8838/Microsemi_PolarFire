@@ -38,6 +38,10 @@ SmartHLSを用いて、ハンドシェークの信号無しのIPを作成し、L
         5. 終了する。
     6. IO制約を設定する。
         1. Edit I/Oを選択し、ポート仕様を定義する。
+        * ポート接続
+        
+           ![blockdiagram](images/constrains.png "constrains")
+
     7. Place and Routeを行う
     8. Idenfity Debug Designを行い、ロジックアナライザを起動し、信号を観察する。
 
