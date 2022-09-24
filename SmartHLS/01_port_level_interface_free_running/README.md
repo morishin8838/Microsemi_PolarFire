@@ -11,7 +11,7 @@ SmartHLSを用いて、ハンドシェークの信号無しのIPを作成し、L
 1. IP作成
     1. SmartHLS起動 
         * コード作成
-        ![ソースコード](images/src.png "SmartHLS")
+            ![ソースコード](images/src.png "SmartHLS")
 
     2. コンパイル実行(SW to HW) 
         * error.h見つからないコンパイルエラーが発生したらこれをやる
