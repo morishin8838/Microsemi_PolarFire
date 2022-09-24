@@ -2,6 +2,7 @@
 SmartHLSを用いて、ハンドシェークの信号無しのIPを作成し、LiberoにてLED点灯させます。
 
 ## 開発環境
+* Host PC:Ubuntu20.04
 * Libero SoC v2022.1
 * SmartHLS
 * MPF300-EVAL-KIT-ES
@@ -21,10 +22,11 @@ SmartHLSを用いて、ハンドシェークの信号無しのIPを作成し、L
     2. Project => Excute Script => Smart HLSの作業ディレクトリにある"create_hdl_plus.tcl" を選択 
     3. 右クリック => instatiate in ***を選択し、D上にインスタンスを生成する。
     4. 配線する
-        ![blockdiagram](images/blockdiagram.png "blockdiagram")
+        * 全体配線図
+           ![blockdiagram](images/blockdiagram.png "blockdiagram")
         
         * タイマHDL
-        ![blockdiagram](images/ms_timer.png "Timer")
+           ![blockdiagram](images/ms_timer.png "Timer")
         .png
 
     5. 論理合成を行う。
