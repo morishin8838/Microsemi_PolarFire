@@ -11,6 +11,7 @@ SmartHLSを用いて、ハンドシェークの信号無しのIPを作成し、L
 1. IP作成
     1. SmartHLS起動 
         * コード作成
+        
             ![ソースコード](images/src.png "SmartHLS")
 
     2. コンパイル実行(SW to HW) 
@@ -26,8 +27,8 @@ SmartHLSを用いて、ハンドシェークの信号無しのIPを作成し、L
            ![blockdiagram](images/blockdiagram.png "blockdiagram")
         
         * タイマHDL
+
            ![blockdiagram](images/ms_timer.png "Timer")
-        .png
 
     5. 論理合成を行う。
         1. 右クリックし、intactivelyを選択し、Synplify Proを起動する。
