@@ -1,11 +1,11 @@
 # 手順
 
 ## MPF300評価ボード 観測ポイント
-*  回路図
+* 回路図 SmartDebug 観察用テストピン
 
     ![PROB_TestPin_CircuitDiagram](images/00A_PROB_TestPin_CircuitDiagram.png "PROB_TestPin_CircuitDiagram")
 
-* MPF300評価ボードの場合、H6/G6は予約されている。
+* 外観図 テストピン
 
     ![PROB_TestPin](images/00B_PROB_TestPin.png "PROB_TestPin")
 
@@ -45,7 +45,7 @@
         ![TP](images/00C_PROB_TestPin.png "TP")
 
     2. 信号を観察する
-    
+
         ![Oscilloscopes](images/05_Oscilloscopes.png "Oscilloscopes")
         * 500msタイマ信号
         * プッシュボタン信号
