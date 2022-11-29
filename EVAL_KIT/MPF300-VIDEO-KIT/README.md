@@ -4,6 +4,8 @@
 ## Libero プロジェクト展開時にシャットダウンする不具合があります。その対応
 * 症状
     - Videoキットのプロジェクトサンプルmpf_dg0849_liberosoc_dfを起動すると、ワーニング表示後に、アプリが落ちる。
+* 条件
+    - Libero v2022.2
 
 * 対処方法
     1. VIDEO_KIT_TOP.sdbを当該プロジェクトのVIDEO_KIT_TOP.sdbと置き換える
