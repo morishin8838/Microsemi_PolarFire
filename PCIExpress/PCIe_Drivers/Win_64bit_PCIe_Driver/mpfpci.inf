@@ -1,0 +1,125 @@
+;/*++
+;
+;Copyright (c) 2016   Microsemi Corporation
+; All rights reserved.
+;
+;Module Name:
+;
+;    mpci.INF
+;
+;Abstract:
+;    INF file for the microsemi pci driver.
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=PolarFire PCIe
+ClassGuid={CFBC8BC3-500E-4A6A-84FE-2690F17DD9EF}
+
+Provider=%MIC%
+DriverVer=11/14/2017,6.1.7600.16385
+CatalogFile=microsemipci.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=mpciClassReg     
+
+[mpciClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+HKR,,DeviceCharacteristics,0x10001,0x100     ;Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GRGWRC;;;BU)(A;;GRGWRC;;;LS)" ;Allow generic all access to system and built-in Admin. 
+
+
+; ================= Device Install section =====================
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%MIC%=MIC,NTAMD64
+
+[SourceDisksFiles]
+mpfpci.sys=1
+
+[SourceDisksNames]
+1=%DISK_NAME%,
+
+; For Win2K
+[MIC]
+; DisplayName           Section           DeviceId
+; -----------           -------           --------
+%mpci.DRVDESC%=      mpci_Inst,     PCI\VEN_11aa&DEV_1556
+
+
+; For XP and later
+[MIC.NTAMD64]
+; DisplayName           Section           DeviceId
+; -----------           -------           --------
+%mpci.DRVDESC%=      mpci_Inst,     PCI\VEN_11aa&DEV_1556
+
+
+[mpci_Inst.NT]
+CopyFiles=mpci.CopyFiles
+
+[mpci.CopyFiles]
+mpfpci.sys
+
+[mpci_Inst.NT.Services]
+AddService=mpci,0x00000002,mpci_Service 
+
+[mpci_Service]
+DisplayName    = %mpci.SVCDESC%                            
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\mpfpci.sys                            
+AddReg         = mpci_Parameters_AddReg
+
+[mpci_Inst.NT.HW]
+AddReg = mydevice_addreg
+
+[mydevice_addreg]
+HKR,Interrupt Management,,0x00000010
+HKR,Interrupt Management\MessageSignaledInterruptProperties,,0x00000010
+HKR,Interrupt Management\MessageSignaledInterruptProperties,MSISupported,0x00010001,1
+HKR,Interrupt Management\MessageSignaledInterruptProperties",MessageNumberLimit,0x00010001,16
+
+
+
+
+
+;-------------- Coinstaller installation
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[mpci_Inst.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[mpci_Inst.NT.Wdf]
+KmdfService = mpci, mpci_wdfsect
+[mpci_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+MIC = "Microsemi"
+ClassName = "PolarFire PCIe"
+mpci.SVCDESC = "Driver Service for the Microsemi PCI"
+mpci.DRVDESC = "PolarFire PCIe"
+DISK_NAME = "mpci Install Disk"
+
