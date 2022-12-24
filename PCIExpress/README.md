@@ -4,7 +4,7 @@
 * Windows10 21H2
 1. Visual Studio 2017 インストール
     * https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
-
+    
 2. Windows SDKのインストール
     * https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
     
@@ -13,6 +13,9 @@
         * https://learn.microsoft.com/ja-jp/windows-hardware/drivers/other-wdk-downloads?source=recommendations
         * WDK for Windows 10 Version 1709をダウンロード
     2. wdksetup.exeをクリック実行
+   
+### ツールセット変更
+* General -> プラットフォームツールセット -> ここを変更する
 
 ### pci_driver ビルドエラー事例と対策
 1. 'ntddk.h' : No such file or directory が発生した場合
