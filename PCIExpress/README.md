@@ -11,11 +11,19 @@
 3. Windows Driver Kit (WDK) インストール
     1. download
         * https://learn.microsoft.com/ja-jp/windows-hardware/drivers/other-wdk-downloads?source=recommendations
-        * WDK for Windows 10 Version 1709をダウンロード
+        * Windows 10 バージョンにあうものをダウンロード
+        * 22H2の場合、https://go.microsoft.com/fwlink/?linkid=2128854
     2. wdksetup.exeをクリック実行
+        * もし、WDKと一致するSDKがない場合、再度SDKをインストールする
+        * Windows 10 SDK, version 2004 (10.0.19041.0)
+        * https://go.microsoft.com/fwlink/?linkid=2120843
    
-### ツールセット変更
-* General -> プラットフォームツールセット -> ここを変更する
+* ビルド方法
+    1. ツールセット変更
+        * General -> プラットフォームツールセット -> ここを変更する
+    2. ビルドエラーが出る場合、ここに記載された方法で対処する。
+    3. x64がない場合、新規作成する。
+        
 
 ### pci_driver ビルドエラー事例と対策
 1. 'ntddk.h' : No such file or directory が発生した場合
