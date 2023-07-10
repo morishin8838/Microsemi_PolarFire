@@ -13,6 +13,12 @@
 
     ![Constrains](images/01_Constrains.png "Constrains")
 
+## VIDEO KIT評価ボード 観測ポイント
+* 回路図 SmartDebug 観察用テストピン
+
+    ![PROB_Videokit TestPin_CircuitDiagram](images/smartdebug_pin.png "TestPin_CircuitDiagram")
+
+
 ## 前準備
 1. ホストとターゲット基板をFlashPro5で接続する
 2. ターゲット基板電源ON
