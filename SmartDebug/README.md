@@ -18,6 +18,9 @@
 
     ![PROB_Videokit TestPin_CircuitDiagram](images/smartdebug_pin.png "TestPin_CircuitDiagram")
 
+* 外観図 テストピン
+
+    ![PROB_TestPin](images/Videokit_PF.png "PROB_TestPin")
 
 ## 前準備
 1. ホストとターゲット基板をFlashPro5で接続する
