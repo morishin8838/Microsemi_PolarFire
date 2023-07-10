@@ -53,7 +53,7 @@
     1. Design Flow タブ “Program and Debug Design”=> “Debug Design” => “Identify Debug Design” をダブルクリック
         * JTAG/FTDIが認識しない場合、cableセッティングを行う。autoを選択する。
     
-            ![Setup and Preferences](images/setup_cable "Cable Setting")
+            ![Setup and Preferences](images/setup_cable.png "Cable Setting")
 
     2. トリガ条件設定
         *“Browser” の “File” よりマウス左クリックで HDL を選択
@@ -66,5 +66,5 @@
         1. Debugger” メニュー => "Waveform viewer" で波形表示
         2. Waveform viewer セッティング
                 
-            ![Setup and Preferences](images/GTKWave.png "GTKWave"         
+            ![Setup and Preferences](images/GTKWave.png "GTKWave")         
 
